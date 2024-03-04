@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../Images/Logo/buycellphone-high-resolution-logo-transparent.webp";
 import "./style.css";
 import { BsFillTelephoneInboundFill, BsBagCheckFill } from "react-icons/bs";
@@ -48,6 +48,8 @@ function Header() {
         <MdOutlineLocationOn />
         Hệ thống cửa hàng
       </button>
+      <button className="btn-sign">Đăng nhập</button>
+      <button className="btn-sign">Đăng ký</button>
     </div>
   );
 }
