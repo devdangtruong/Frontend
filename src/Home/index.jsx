@@ -15,7 +15,7 @@ import Footer from "../Components/Footer";
 function Home(props) {
   return (
     <div>
-      <Header pageToLogin={props.toLogin} />
+      <Header pageToSignIn={props.toSignIn} pageToSignUp={props.toSignUp} />
       <Container1 />
       <Container2 />
       <Container3 />

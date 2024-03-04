@@ -48,10 +48,12 @@ function Header(props) {
         <MdOutlineLocationOn />
         Hệ thống cửa hàng
       </button>
-      <button className="btn-sign" onClick={props.pageToLogin}>
+      <button className="btn-sign" onClick={props.pageToSignIn}>
         Đăng nhập
       </button>
-      <button className="btn-sign">Đăng ký</button>
+      <button className="btn-sign" onClick={props.pageToSignUp}>
+        Đăng ký
+      </button>
     </div>
   );
 }
