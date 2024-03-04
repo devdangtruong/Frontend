@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import product1 from "../../../Images/OldOther/cap-sac.webp";
 import product2 from "../../../Images/OldOther/dan-man-hinh.webp";
 import product3 from "../../../Images/OldOther/laptop.webp";

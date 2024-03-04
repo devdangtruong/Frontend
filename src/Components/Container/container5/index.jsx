@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import product1 from "../../../Images/Inoi/inoi-288s_197564.webp";
 import product2 from "../../../Images/Inoi/inoi-a72_197567.webp";
 import product3 from "../../../Images/Inoi/inoi-a83_197563.webp";

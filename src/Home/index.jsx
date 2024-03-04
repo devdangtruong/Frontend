@@ -12,10 +12,10 @@ import Container9 from "../Components/Container/container9";
 import Container10 from "../Components/Container/container10";
 import Footer from "../Components/Footer";
 
-function Home() {
+function Home(props) {
   return (
     <div>
-      <Header />
+      <Header pageToLogin={props.toLogin} />
       <Container1 />
       <Container2 />
       <Container3 />

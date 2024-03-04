@@ -8,7 +8,7 @@ import {
   MdOutlineSearch,
 } from "react-icons/md";
 
-function Header() {
+function Header(props) {
   return (
     <div className="header">
       <img src={logo} alt="logo" style={{ width: "200px" }} />
@@ -48,7 +48,9 @@ function Header() {
         <MdOutlineLocationOn />
         Hệ thống cửa hàng
       </button>
-      <button className="btn-sign">Đăng nhập</button>
+      <button className="btn-sign" onClick={props.pageToLogin}>
+        Đăng nhập
+      </button>
       <button className="btn-sign">Đăng ký</button>
     </div>
   );

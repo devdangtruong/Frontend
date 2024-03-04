@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import product1 from "../../../Images/AndroidTab/1323213.webp";
 import product2 from "../../../Images/AndroidTab/ava-s9fe-mint.webp";
 import product3 from "../../../Images/AndroidTab/ava-s9fe-silver-1.webp";
