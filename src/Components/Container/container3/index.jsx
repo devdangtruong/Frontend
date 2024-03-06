@@ -1,20 +1,12 @@
 import React from "react";
-import product1 from "../../../Images/SamsungImages/1-14.webp";
-import product2 from "../../../Images/SamsungImages/ava-Zfold5-bluepng-3.webp";
-import product3 from "../../../Images/SamsungImages/ava-Zfold5-cream.webp";
-import product4 from "../../../Images/SamsungImages/ava-a34-green.webp";
-import product5 from "../../../Images/SamsungImages/ava-s20fe-mint.webp";
-import product6 from "../../../Images/SamsungImages/ava-s22ultra-scream.webp";
-import product7 from "../../../Images/SamsungImages/ava-s23-black.webp";
-import product8 from "../../../Images/SamsungImages/ava-s23-purple.webp";
-import product9 from "../../../Images/SamsungImages/ava-zflip5-Purrple.webp";
-import product10 from "../../../Images/SamsungImages/ava-zflip5-mint.webp";
-import product11 from "../../../Images/SamsungImages/avt-samsung-a23-xanh.webp";
-import product12 from "../../../Images/SamsungImages/s21fe-trang.webp";
-import product13 from "../../../Images/SamsungImages/samsung-galaxy-s24-plus_197557.webp";
-import product14 from "../../../Images/SamsungImages/samsung-galaxy-s24-ultra_197559.webp";
-import product15 from "../../../Images/SamsungImages/samsung-galaxy-s24_197555.webp";
-
+import product1 from "../../../Images/OldOther/cap-sac.webp";
+import product2 from "../../../Images/OldOther/dan-man-hinh.webp";
+import product3 from "../../../Images/OldOther/laptop.webp";
+import product4 from "../../../Images/OldOther/loa.webp";
+import product5 from "../../../Images/OldOther/op-lung.webp";
+import product6 from "../../../Images/OldOther/phu-kien-apple.webp";
+import product7 from "../../../Images/OldOther/pin-du-phong.webp";
+import product8 from "../../../Images/OldOther/tai-nghe.webp";
 function Container3() {
   const listProducts = [
     product1,
@@ -25,25 +17,18 @@ function Container3() {
     product6,
     product7,
     product8,
-    product9,
-    product10,
-    product11,
-    product12,
-    product13,
-    product14,
-    product15,
   ];
   return (
     <div>
-      <span className="title-list">SAMSUNG</span>
-      <div className="container">
+      <span className="title-list">DANH MỤC HÀNG CŨ</span>
+      <div style={{ display: "flex" }}>
         {listProducts.map((product) => (
           <div className="product-information">
-            <img src={product} alt="" style={{ width: "150px" }} />
-            <span style={{ fontWeight: "bold" }}>Samsung</span>
+            <img src={product} alt="" style={{ width: "100px" }} />
+            <span style={{ fontWeight: "bold" }}>HÀNG CŨ</span>
             <span>20.000.000 đ</span>
             <p>
-              [Từ 11-29.2] Lì xì trao tay nhận vạn điều may - nhận ngay lì xì
+              [từ 11-29.2] Lì xì trao tay nhận vạn điều may - nhận ngay lì xì
               200.000đ
             </p>
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../Images/Logo/buycellphone-high-resolution-logo-transparent.webp";
 import "./style.css";
 import { BsFillTelephoneInboundFill, BsBagCheckFill } from "react-icons/bs";
@@ -9,6 +9,11 @@ import {
 } from "react-icons/md";
 
 function Header(props) {
+  // const [search, setSearch] = useState("");
+  // const searchProducts = (e) => {
+  //   setSearch(e.target.value);
+  // };
+
   return (
     <div className="header">
       <img src={logo} alt="logo" style={{ width: "200px" }} />
@@ -17,10 +22,11 @@ function Header(props) {
           type="text"
           className="search-input"
           placeholder="Bạn cần tìm gì?"
+          // onChange={searchProducts}
         />
         <MdOutlineSearch />
       </div>
-
+      {/* <div>{search.includes(props.product.lists.titles)}</div> */}
       <button
         style={{
           backgroundColor: "pink",
