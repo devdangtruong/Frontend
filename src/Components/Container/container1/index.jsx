@@ -41,7 +41,7 @@ function Container1() {
           backgroundColor: "#e9bbc3",
           fontSize: "large",
           fontWeight: "bold",
-          padding: "0px 10px",
+          padding: "0px 5px",
           margin: "10px 100px",
           display: "flex",
           justifyContent: "center",
@@ -49,8 +49,8 @@ function Container1() {
       >
         <div className="warn-btn">!</div>
         <span style={{ color: "red" }}>
-          Năm thìn mua "táo" - mã đáo thành công: Giảm giá các sản phẩm apple
-          cực hấp dẫn (Từ 22.02 đến 29.02)
+          NĂM THÌN MUA TÁO - MÃ ĐÁO THÀNH CÔNG: GIẢM GIÁ CÁC SẢN PHẨM CỰC HẤP
+          DẪN
         </span>
         <div className="warn-btn">!</div>
       </div>

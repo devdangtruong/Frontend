@@ -25,4 +25,10 @@
 
 .login-text {
   width: 33%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.validate {
+  color: red;
 }

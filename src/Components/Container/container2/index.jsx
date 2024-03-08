@@ -1,7 +1,6 @@
 import React from "react";
 import "../style.css";
 function Container2(props) {
-  console.log(props);
   return (
     <div>
       <span className="title-list">{props.product.title}</span>

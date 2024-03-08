@@ -1,18 +1,44 @@
 import React, { useState } from "react";
 import "../style.css";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
-function SignUp() {
+function SignUp(props) {
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState("");
+  const passTitles = ["Mật khẩu", "Nhập lại mật khẩu"];
+  const [validate, setValidate] = useState("");
+  const [account, setAccount] = useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
 
   const showPassword = (e) => {
     setPassword(e.target.value);
   };
+
+  const getAccount = (e) => {
+    setAccount(e.target.value);
+  };
+
+  const getEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const getName = (e) => {
+    setName(e.target.value);
+  };
   const hidePassword = () => {
     setShow(!show);
   };
-  const titles = ["Họ và tên", "Email", "Tên tài khoản"];
-  const passTitles = ["Mật khẩu", "Nhập lại mật khẩu"];
+
+  const sendForm = () => {
+    if (!password || !email || !name || !account) {
+      setValidate("Bạn chưa điền đầy đủ thông tin và ít nhất có 10 kí tự");
+    } else if (!email.includes("@")) {
+      setValidate("Vui lòng nhập đúng email");
+    } else {
+      setValidate("");
+      props.toHome("home");
+    }
+  };
   return (
     <div
       style={{
@@ -24,12 +50,35 @@ function SignUp() {
     >
       <div className="login">
         <h1>ĐĂNG KÝ</h1>
-        {titles.map((title) => (
-          <div className="login-child">
-            <span className="login-text">{title}</span>
-            <input type="text" className="input-login" />
-          </div>
-        ))}
+
+        <div className="login-child">
+          <span className="login-text">Họ và tên</span>
+          <input
+            type="text"
+            className="input-login"
+            value={name}
+            onChange={getName}
+          />
+        </div>
+        <div className="login-child">
+          <span className="login-text">Email</span>
+          <input
+            type="text"
+            className="input-login"
+            value={email}
+            onChange={getEmail}
+          />
+        </div>
+        <div className="login-child">
+          <span className="login-text">Tên tài khoản</span>
+          <input
+            type="text"
+            className="input-login"
+            value={account}
+            onChange={getAccount}
+          />
+        </div>
+
         {passTitles.map((pt) => (
           <div className="login-child">
             <span className="login-text">{pt}</span>
@@ -38,6 +87,7 @@ function SignUp() {
                 <input
                   type="text"
                   className="input-login"
+                  value={password}
                   onChange={showPassword}
                 />
                 <IoMdEye onClick={hidePassword} />
@@ -47,6 +97,7 @@ function SignUp() {
                 <input
                   type="password"
                   className="input-login"
+                  value={password}
                   onChange={showPassword}
                 />
                 <IoMdEyeOff onClick={hidePassword} />
@@ -54,8 +105,10 @@ function SignUp() {
             )}
           </div>
         ))}
-
-        <button className="btn-sign">ĐĂNG KÝ</button>
+        {validate ? <div className="validate">{validate}</div> : null}
+        <button className="btn-sign" onClick={sendForm}>
+          ĐĂNG KÝ
+        </button>
       </div>
     </div>
   );

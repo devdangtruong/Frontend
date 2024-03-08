@@ -14,12 +14,13 @@ function App() {
   const pageToSignUp = () => {
     setPages("signup");
   };
+
   return (
     <div className="App">
       {pages === "signin" ? (
-        <Signin />
+        <Signin toHome={setPages} />
       ) : pages === "signup" ? (
-        <SignUp />
+        <SignUp toHome={setPages} />
       ) : (
         <Home toSignIn={pageToSignin} toSignUp={pageToSignUp} />
       )}
