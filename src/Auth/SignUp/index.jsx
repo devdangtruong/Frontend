@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../style.css";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import axios from "axios";
 function SignUp(props) {
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState("");
@@ -9,6 +10,13 @@ function SignUp(props) {
   const [account, setAccount] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+
+  const data = {
+    name: name,
+    email: email,
+    password: password,
+    account: account,
+  };
 
   const showPassword = (e) => {
     setPassword(e.target.value);
@@ -38,6 +46,7 @@ function SignUp(props) {
       setValidate("");
       props.toHome("home");
     }
+    axios.post("", JSON.stringify(data));
   };
   return (
     <div
