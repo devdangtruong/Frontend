@@ -49,7 +49,7 @@ function SignUp(props) {
       setValidate("");
       props.toHome("home");
     }
-    axios.post(process.env.BACKEND_USER, data);
+    axios.post(process.env.REACT_APP_BACKEND_USER, data);
   };
   return (
     <div
