@@ -41,7 +41,7 @@ function SignUp(props) {
   };
 
   const sendForm = () => {
-    if (!password || !email || !name || !account) {
+    if (!password || !email || !fullname || !account) {
       setValidate("Bạn chưa điền đầy đủ thông tin và ít nhất có 10 kí tự");
     } else if (!email.includes("@")) {
       setValidate("Vui lòng nhập đúng email");
