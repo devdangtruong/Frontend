@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../style.css";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 function SignUp(props) {
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState("");
@@ -9,10 +12,10 @@ function SignUp(props) {
   const [validate, setValidate] = useState("");
   const [account, setAccount] = useState("");
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
+  const [fullname, setFullName] = useState("");
 
   const data = {
-    name: name,
+    name: fullname,
     email: email,
     password: password,
     account: account,
@@ -31,7 +34,7 @@ function SignUp(props) {
   };
 
   const getName = (e) => {
-    setName(e.target.value);
+    setFullName(e.target.value);
   };
   const hidePassword = () => {
     setShow(!show);
@@ -46,7 +49,7 @@ function SignUp(props) {
       setValidate("");
       props.toHome("home");
     }
-    axios.post("", JSON.stringify(data));
+    axios.post(process.env.BACKEND_USER, data);
   };
   return (
     <div

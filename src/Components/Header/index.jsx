@@ -40,6 +40,16 @@ function Header(props) {
     { name: "Đăng nhập", method: props.pageToSignIn },
     { name: "Đăng ký", method: props.pageToSignUp },
   ];
+
+  const searchItems = () => {
+    const test = search.filter((product) =>
+      product.lists.some((v) =>
+        v.titles.toLowerCase().includes(searchName.toLocaleLowerCase())
+      )
+    );
+    props.setListItem(test);
+  };
+
   return (
     <div className="header">
       <img src={logo} alt="logo" style={{ width: "200px" }} />
@@ -50,11 +60,8 @@ function Header(props) {
           placeholder="Bạn cần tìm gì?"
           onChange={searchProducts}
         />
-        <MdOutlineSearch />
+        <MdOutlineSearch onClick={searchItems} />
       </div>
-      {search.filter((product) =>
-        product.lists.includes(searchName.toLowerCase())
-      )}
       {header.map((head) => (
         <button
           style={{

@@ -6,6 +6,10 @@ function Signin(props) {
   const [password, setPassword] = useState("");
   const [validate, setValidate] = useState("");
   const [account, setAccount] = useState("");
+  const data = {
+    account: account,
+    password: password,
+  };
   const showPassword = (e) => {
     setPassword(e.target.value);
   };
