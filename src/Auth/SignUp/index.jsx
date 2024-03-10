@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import "../style.css";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import axios from "axios";
-import dotenv from "dotenv";
 
-dotenv.config();
 function SignUp(props) {
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState("");
