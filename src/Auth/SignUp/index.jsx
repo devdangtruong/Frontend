@@ -68,7 +68,7 @@ function SignUp(props) {
           <input
             type="text"
             className="input-login"
-            value={name}
+            value={fullname}
             onChange={getName}
           />
         </div>
