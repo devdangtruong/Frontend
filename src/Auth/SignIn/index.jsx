@@ -27,7 +27,6 @@ function Signin(props) {
     if (!password || !account) {
       setValidate("Vui lòng điền tài khoản hoặc mật khẩu");
     } else {
-      setValidate("");
       axios.post(process.env.REACT_APP_BACKEND_AUTH, data);
       props.toHome("home");
     }
