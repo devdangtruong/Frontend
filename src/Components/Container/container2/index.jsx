@@ -5,8 +5,8 @@ function Container2(props) {
     <div>
       <span className="title-list">{props.product.title}</span>
       <div className="container">
-        {props.product.lists.map((product) => (
-          <div className="product-information">
+        {props.product.lists.map((product, index) => (
+          <div className="product-information" key={index}>
             <img src={product.images} alt="" style={{ width: "150px" }} />
             <span style={{ fontWeight: "bold" }}>{product.titles}</span>
             <span> {product.prices}đ</span>

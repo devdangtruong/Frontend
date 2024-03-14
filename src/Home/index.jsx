@@ -17,8 +17,8 @@ function Home(props) {
         setListItem={setListItem}
       />
       <Container1 />
-      {listItem.map((product) => (
-        <Container2 product={product} />
+      {listItem.map((product, index) => (
+        <Container2 product={product} key={index} />
       ))}
       <Container3 />
       <Container4 />

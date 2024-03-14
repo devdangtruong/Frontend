@@ -22,8 +22,8 @@ function Container3() {
     <div>
       <span className="title-list">DANH MỤC HÀNG CŨ</span>
       <div style={{ display: "flex" }}>
-        {listProducts.map((product) => (
-          <div className="product-information">
+        {listProducts.map((product, index) => (
+          <div className="product-information" key={index}>
             <img src={product} alt="" style={{ width: "100px" }} />
             <span style={{ fontWeight: "bold" }}>HÀNG CŨ</span>
             <span>20.000.000 đ</span>

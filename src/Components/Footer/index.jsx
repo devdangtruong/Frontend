@@ -32,7 +32,7 @@ function Footer() {
         alignItems: "flex-start",
       }}
     >
-      {footer.map((content) => (
+      {footer.map((content, i) => (
         <div
           style={{
             display: "flex",
@@ -40,6 +40,7 @@ function Footer() {
             alignItems: "flex-start",
             flexDirection: "column",
           }}
+          key={i}
         >
           <h3>{content.title}</h3>
           <div>{content.content}</div>

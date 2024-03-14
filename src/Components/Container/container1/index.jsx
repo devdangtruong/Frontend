@@ -69,8 +69,8 @@ function Container1() {
             borderRadius: "10px",
           }}
         >
-          {listProducts.map((list) => (
-            <div className="list-product">
+          {listProducts.map((list, index) => (
+            <div className="list-product" key={index}>
               <div>{list}</div>
               <BsChevronRight />
             </div>
@@ -121,8 +121,13 @@ function Container1() {
             borderRadius: "10px",
           }}
         >
-          {listImages.map((image) => (
-            <img src={image} alt="image" style={{ width: "200px" }} />
+          {listImages.map((image, index) => (
+            <img
+              src={image}
+              alt="image"
+              style={{ width: "200px" }}
+              key={index}
+            />
           ))}
         </div>
       </div>

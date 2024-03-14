@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../style.css";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import axios from "axios";
 function Signin(props) {
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState("");
@@ -27,6 +28,7 @@ function Signin(props) {
       setValidate("Vui lòng điền tài khoản hoặc mật khẩu");
     } else {
       setValidate("");
+      axios.post(process.env.REACT_APP_BACKEND_AUTH, data);
       props.toHome("home");
     }
   };

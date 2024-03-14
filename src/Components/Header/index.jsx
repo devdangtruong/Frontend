@@ -62,8 +62,9 @@ function Header(props) {
         />
         <MdOutlineSearch onClick={searchItems} />
       </div>
-      {header.map((head) => (
+      {header.map((head, i) => (
         <button
+          key={i}
           style={{
             backgroundColor: "pink",
             padding: "5px",
@@ -75,8 +76,8 @@ function Header(props) {
           {head.icon}
         </button>
       ))}
-      {sign.map((i) => (
-        <button className="btn-sign" onClick={i.method}>
+      {sign.map((i, index) => (
+        <button className="btn-sign" onClick={i.method} key={index}>
           {i.name}
         </button>
       ))}
