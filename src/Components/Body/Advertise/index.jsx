@@ -17,7 +17,7 @@ import image4 from "../../../Images/ImagesAdvertise/609-ZyKyD.webp";
 import { BsChevronRight } from "react-icons/bs";
 import image5 from "../../../Images/ImagesAdvertise/581.webp";
 
-function Container1() {
+function Advertiser() {
   const listProducts = [
     "Điện thoại",
     "Iphone",
@@ -135,4 +135,4 @@ function Container1() {
   );
 }
 
-export default Container1;
+export default Advertiser;

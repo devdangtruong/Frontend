@@ -1,27 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../Components/Header";
-import Container1 from "../Components/Container/container1";
-import Container2 from "../Components/Container/container2";
-import Container3 from "../Components/Container/container3";
-import Container4 from "../Components/Container/container4";
+import Advertiser from "../Components/Body/Advertise";
+import Accessory from "../Components/Body/Accessory";
 import Footer from "../Components/Footer";
-import { products } from "../Components/Products";
+import "../Components/Body/style.css";
+import List from "../Components/Body/List";
 function Home(props) {
-  const [listItem, setListItem] = useState([...products]);
+  console.log(props);
   return (
     <div>
       <Header
         pageToSignIn={props.toSignIn}
         pageToSignUp={props.toSignUp}
-        product={products}
-        setListItem={setListItem}
+        listItem={props.listItem}
+        setListItem={props.setListItem}
       />
-      <Container1 />
-      {listItem.map((product, index) => (
-        <Container2 product={product} key={index} />
-      ))}
-      <Container3 />
-      <Container4 />
+      <Advertiser />
+      <List
+        listItem={props.listItem}
+        pageToInformationProduct={props.pageToInformationProduct}
+      />
+      <Accessory />
       <Footer />
     </div>
   );

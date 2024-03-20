@@ -9,7 +9,7 @@ import {
 } from "react-icons/md";
 
 function Header(props) {
-  const [search, setSearch] = useState(props.product);
+  const [search, setSearch] = useState(props.listItem);
   const [searchName, setSearchName] = useState("");
   const searchProducts = (e) => {
     setSearchName(e.target.value);
@@ -43,9 +43,7 @@ function Header(props) {
 
   const searchItems = () => {
     const test = search.filter((product) =>
-      product.lists.some((v) =>
-        v.titles.toLowerCase().includes(searchName.toLocaleLowerCase())
-      )
+      product.name.toLowerCase().includes(searchName.toLowerCase())
     );
     props.setListItem(test);
   };
