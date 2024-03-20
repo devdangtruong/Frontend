@@ -6,7 +6,6 @@ import Footer from "../Components/Footer";
 import "../Components/Body/style.css";
 import List from "../Components/Body/List";
 function Home(props) {
-  console.log(props);
   return (
     <div>
       <Header

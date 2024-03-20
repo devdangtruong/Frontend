@@ -22,7 +22,6 @@ function App() {
     axios
       .get(process.env.REACT_APP_BACKEND_PRODUCT)
       .then((res) => {
-        console.log(res);
         setListItem(res.data);
       })
       .catch((err) => console.log(err));
@@ -32,6 +31,9 @@ function App() {
   const pageToInformationProduct = (_id) => {
     setPages("informationProduct");
     setIdentify(_id);
+  };
+  const pageToHome = () => {
+    setPages("home");
   };
 
   return (
@@ -43,7 +45,7 @@ function App() {
       ) : pages === "informationProduct" ? (
         <InformationProduct
           searchInformation={searchInformation}
-          pageToHome={setPages}
+          pageToHome={pageToHome}
         />
       ) : (
         <Home

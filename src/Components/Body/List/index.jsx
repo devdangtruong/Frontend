@@ -8,7 +8,7 @@ function List({ listItem, pageToInformationProduct }) {
           className="product-information"
           key={product._id}
           style={{ border: "none" }}
-          // onClick={pageToInformationProduct(product._id)}
+          onClick={() => pageToInformationProduct(product._id)}
         >
           <img src={product.image} alt="" style={{ width: "150px" }} />
           <span style={{ fontWeight: "bold" }}>{product.name}</span>
