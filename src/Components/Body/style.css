@@ -32,13 +32,12 @@
 
 .list-product:hover {
   background-color: red;
-  padding: 10px;
 }
 
 .product-information {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   box-shadow: 2px 2px 2px 2px #dad3d3;
   border-radius: 5px;

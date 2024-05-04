@@ -51,7 +51,7 @@ function Header(props) {
   return (
     <div className="header">
       <img src={logo} alt="logo" style={{ width: "200px" }} />
-      <div>
+      <div style={{ backgroundColor: "white", borderRadius: "10px" }}>
         <input
           type="text"
           className="search-input"
@@ -61,28 +61,12 @@ function Header(props) {
         <MdOutlineSearch onClick={searchItems} />
       </div>
       {header.map((head, i) => (
-        <button
-          key={i}
-          style={{
-            backgroundColor: "pink",
-            padding: "5px",
-            borderRadius: "5px",
-            border: "none",
-          }}
-        >
+        <button key={i} className="btn-list">
           {head.head}
           {head.icon}
         </button>
       ))}
-      <button
-        onClick={props.pageToCart}
-        style={{
-          backgroundColor: "pink",
-          padding: "5px",
-          borderRadius: "5px",
-          border: "none",
-        }}
-      >
+      <button onClick={props.pageToCart} className="btn-list">
         Chi tiết giỏ hàng
         <BsBagCheckFill />
       </button>

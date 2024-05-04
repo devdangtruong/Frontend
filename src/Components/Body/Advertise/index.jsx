@@ -65,7 +65,6 @@ function Advertiser() {
         <div
           style={{
             width: "25%",
-            boxShadow: "5px 5px 5px gray",
             borderRadius: "10px",
           }}
         >
@@ -79,7 +78,6 @@ function Advertiser() {
         <div
           style={{
             width: "50%",
-            boxShadow: "5px 5px 5px gray",
             borderRadius: "10px",
           }}
         >
@@ -115,7 +113,6 @@ function Advertiser() {
         <div
           style={{
             width: "25%",
-            boxShadow: "5px 5px 5px gray",
             borderRadius: "10px",
           }}
         >
