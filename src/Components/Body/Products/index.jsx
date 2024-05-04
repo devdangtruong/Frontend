@@ -1,11 +1,11 @@
-import product1 from "../../Images/OldOther/cap-sac.webp";
-import product2 from "../../Images/OldOther/dan-man-hinh.webp";
-import product3 from "../../Images/OldOther/laptop.webp";
-import product4 from "../../Images/OldOther/loa.webp";
-import product5 from "../../Images/OldOther/op-lung.webp";
-import product6 from "../../Images/OldOther/phu-kien-apple.webp";
-import product7 from "../../Images/OldOther/pin-du-phong.webp";
-import product8 from "../../Images/OldOther/tai-nghe.webp";
+import product1 from "../../../Images/OldOther/cap-sac.webp";
+import product2 from "../../../Images/OldOther/dan-man-hinh.webp";
+import product3 from "../../../Images/OldOther/laptop.webp";
+import product4 from "../../../Images/OldOther/loa.webp";
+import product5 from "../../../Images/OldOther/op-lung.webp";
+import product6 from "../../../Images/OldOther/phu-kien-apple.webp";
+import product7 from "../../../Images/OldOther/pin-du-phong.webp";
+import product8 from "../../../Images/OldOther/tai-nghe.webp";
 export const accessory = [
   {
     name: "Cáp sạc",

@@ -23,10 +23,7 @@ function Header(props) {
       head: "Gọi mua hàng",
       icon: <BsFillTelephoneInboundFill />,
     },
-    {
-      head: "Chi tiết giỏ hàng",
-      icon: <BsBagCheckFill />,
-    },
+
     {
       head: "Chính sách bảo hành",
       icon: <MdOutlineSecurity />,
@@ -43,7 +40,10 @@ function Header(props) {
 
   const searchItems = () => {
     const test = search.filter((product) =>
-      product.name.toLowerCase().includes(searchName.toLowerCase())
+      product.name
+        .toLowerCase()
+        .toString()
+        .includes(searchName.toLowerCase().toString())
     );
     props.setListItem(test);
   };
@@ -74,6 +74,18 @@ function Header(props) {
           {head.icon}
         </button>
       ))}
+      <button
+        onClick={props.pageToCart}
+        style={{
+          backgroundColor: "pink",
+          padding: "5px",
+          borderRadius: "5px",
+          border: "none",
+        }}
+      >
+        Chi tiết giỏ hàng
+        <BsBagCheckFill />
+      </button>
       {sign.map((i, index) => (
         <button className="btn-sign" onClick={i.method} key={index}>
           {i.name}

@@ -3,8 +3,9 @@ import Signin from "./Auth/SignIn";
 import Home from "./Home";
 import { useEffect, useState } from "react";
 import SignUp from "./Auth/SignUp";
-import InformationProduct from "./Components/InformationProduct.jsx";
+import InformationProduct from "./Components/Body/InformationProduct.jsx/index.jsx";
 import axios from "axios";
+import Cart from "./Components/Body/Cart/index.jsx";
 
 function App() {
   const [pages, setPages] = useState("home");
@@ -36,6 +37,10 @@ function App() {
     setPages("home");
   };
 
+  const pageToCart = () => {
+    setPages("cart");
+  };
+
   return (
     <div className="App">
       {pages === "signin" ? (
@@ -46,6 +51,13 @@ function App() {
         <InformationProduct
           searchInformation={searchInformation}
           pageToHome={pageToHome}
+          listItem={listItem}
+        />
+      ) : pages === "cart" ? (
+        <Cart
+          pageToHome={pageToHome}
+          listItem={listItem}
+          setListItem={setListItem}
         />
       ) : (
         <Home
@@ -54,6 +66,7 @@ function App() {
           listItem={listItem}
           setListItem={setListItem}
           pageToInformationProduct={pageToInformationProduct}
+          pageToCart={pageToCart}
         />
       )}
     </div>

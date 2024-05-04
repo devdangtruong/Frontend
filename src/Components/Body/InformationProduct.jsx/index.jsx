@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-import deleteIcon from "../../Images/Logo/cross-mark_274c.png";
+import deleteIcon from "../../../Images/Logo/cross-mark_274c.png";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment } from "../../../feature/counter/counterSlice";
 function InformationProduct(props) {
-  const [numberProduct, setNumberProduct] = useState(1);
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
-  const increaseProduct = () => {
-    const increase = numberProduct + 1;
-    setNumberProduct(increase);
-  };
-  const decreaseProduct = () => {
-    const decrease = numberProduct - 1;
-    setNumberProduct(decrease);
-  };
+  console.log(props.listItem.map((item) => parseFloat(item.price, 10)));
 
   return (
     <div style={{ display: "flex", justifyContent: "space-around" }}>
@@ -23,7 +19,7 @@ function InformationProduct(props) {
             alignItems: "center",
           }}
         >
-          <img src={info.image} alt="" />
+          <img src={info.image} alt="imageproduct" />
           <div
             style={{
               display: "flex",
@@ -43,21 +39,8 @@ function InformationProduct(props) {
               }}
             >
               <button
-                onClick={increaseProduct}
-                style={{
-                  borderRadius: "10px",
-                  background: "none",
-                  backgroundColor: "orange",
-                  border: "none",
-                  boxShadow: "1px 1px 1px gray",
-                  margin: "10px",
-                }}
-              >
-                +
-              </button>
-              <span>{numberProduct}</span>
-              <button
-                onClick={decreaseProduct}
+                aria-label="Decrement value"
+                onClick={() => dispatch(decrement())}
                 style={{
                   borderRadius: "10px",
                   background: "none",
@@ -68,6 +51,21 @@ function InformationProduct(props) {
                 }}
               >
                 -
+              </button>
+              <span>{count}</span>
+              <button
+                aria-label="Increment value"
+                onClick={() => dispatch(increment())}
+                style={{
+                  borderRadius: "10px",
+                  background: "none",
+                  backgroundColor: "orange",
+                  border: "none",
+                  boxShadow: "1px 1px 1px gray",
+                  margin: "10px",
+                }}
+              >
+                +
               </button>
             </div>
             <span>{info.price}</span>
@@ -82,7 +80,7 @@ function InformationProduct(props) {
                 margin: "10px",
               }}
             >
-              Đặt ngay
+              ĐẶT HÀNG
             </button>
           </div>
         </div>
@@ -91,6 +89,7 @@ function InformationProduct(props) {
         src={deleteIcon}
         onClick={props.pageToHome}
         style={{ width: "50px", height: "50px" }}
+        alt="iconexit"
       />
     </div>
   );

@@ -13,6 +13,7 @@ function Home(props) {
         pageToSignUp={props.toSignUp}
         listItem={props.listItem}
         setListItem={props.setListItem}
+        pageToCart={props.pageToCart}
       />
       <Advertiser />
       <List

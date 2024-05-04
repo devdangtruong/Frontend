@@ -1,5 +1,5 @@
 import React from "react";
-import { accessory } from "../../Products";
+import { accessory } from "../Products";
 function Accessory() {
   return (
     <div>
